@@ -1,4 +1,4 @@
-#include<stdio> /*importing libraries*/
+#include<stdio.h> /*importing libraries*/
 
 /**
  *main function
