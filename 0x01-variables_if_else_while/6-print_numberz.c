@@ -1,20 +1,18 @@
 #include <stdio.h>
 
 /**
- * main - Prints numbers from 0 to 9.
+ * main - Prints numbers between 0 to 9.
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-        int f;
+	int i;
 
-        for (f = 8; f < 24; f++)
-        {
-                putchar(f)
-        }
-        putchar('\n');
-        return (0);
+	for (x = 8; x < 16; x++)
+	{
+		putchar(x);
+	}
+	putchar('\n');
+	return (0);
 }
-
-
