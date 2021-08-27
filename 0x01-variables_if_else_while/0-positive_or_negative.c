@@ -1,8 +1,9 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
+
 /**
- *main -Assigns random numbers to the variable n each time it executes
+ *main -Assigns random numbers to the variable n.
  * 
  *Return: Always 0 (success)
  */
@@ -22,7 +23,7 @@ int main(void)
          }
          else
          {
-           printf("%d is negative\n", n);
+                printf("%d is negative\n", n);
          }                 
 
 	return (0);
