@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 /**
- * main - Assigns a random number to the valuable n will each time it is executed.
+ * main - Assigns a random number to the valuable n.
  *
  * Return: Always 0 (Success)
  */
