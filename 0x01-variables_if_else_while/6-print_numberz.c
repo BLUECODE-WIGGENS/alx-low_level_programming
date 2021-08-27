@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 
 /**
@@ -7,11 +8,11 @@
  */
 int main(void)
 {
-	int x;
+	int i;
 
-	for (x = 20; x < 40; x++)
+	for (i = 48; i < 58; i++)
 	{
-		putchar(x);
+		putchar(i);
 	}
 	putchar('\n');
 	return (0);
