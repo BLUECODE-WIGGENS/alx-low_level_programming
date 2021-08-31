@@ -1,13 +1,17 @@
 #include "main.h"
-
 /**
- *int add(int, int) - add two numbers
- *@x: first number to add
- *@y: second number to add
- *Return: returns the added value
- */
+*add - addition operation
+*@x: first number
+*@y: seconf number
+*Return: sum
+*/
 
 int add(int x, int y)
 {
-        return (x + y);
+int sum;
+
+sum = 0;
+sum = x + y;
+return (sum);
 }
+
