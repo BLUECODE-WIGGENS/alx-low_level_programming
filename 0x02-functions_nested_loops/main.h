@@ -1,6 +1,3 @@
-#ifndef MAIN.H
-#define MAIN.H
-
 void    _putchar(char c);
 void    print_alphabet(void);
 void    print_alphabet_x10(void);
@@ -14,4 +11,3 @@ int     add(int, int);
 void    times_table(void);
 void    print_to_98(int n);
 
-#endif /*MAIN.H */

@@ -1,10 +1,8 @@
 #include "main.h"
-
 /**
-  * main - Prints "Holberton " on the screen.
-  *
-  * Return: Always 0 (success)
-  */
+ *main - main block
+ *Return: 0
+ */
 int main(void)
 {
 _putchar('H');
