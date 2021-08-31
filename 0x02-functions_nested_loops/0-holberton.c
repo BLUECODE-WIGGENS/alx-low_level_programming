@@ -1,25 +1,19 @@
-#include "Holberton.h"
-
+#include "holberton.h"
 /**
- *main - prints Helberton on the screen
+ * main - Entry point
  *
- *Return: always 0 (success)
+ * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-        char *sh = "Holberton";
+	char *sh = "Holberton";
 
-	while(*sh)
+	while (*sh)
 	{
-	  _putchar(sh);
-	  sh++;
-
+		_putchar(*sh);
+		sh++;
 	}
-
-	_putchar("\n);
+	_putchar('\n');
 
 	return (0);
-}	
-	
-	    
+}
