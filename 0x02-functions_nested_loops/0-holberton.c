@@ -8,12 +8,12 @@
 
 int main(void)
 {
-        char *h = "Holberton";
+        char *sh = "Holberton";
 
-	while(*h)
+	while(*sh)
 	{
-	  putchar(h);
-	  h++;
+	  _putchar(sh);
+	  sh++;
 
 	}
 
