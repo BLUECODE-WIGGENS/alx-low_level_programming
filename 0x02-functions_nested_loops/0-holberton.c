@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <Holberton.h>
 
 /**
  *main - prints Helberton on the screen
@@ -17,7 +17,7 @@ int main(void)
 
 	}
 
-	putchar("\n);
+	_putchar("\n);
 
 	return (0);
 }	
