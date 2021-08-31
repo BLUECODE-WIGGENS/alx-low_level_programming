@@ -7,15 +7,14 @@
   */
 int main(void)
 {
-	_putchar('H');
-	_putchar('o');
-	_putchar('l');
-	_putchar('b');
-	_putchar('e');
-	_putchar('r');
-	_putchar('t');
-	_putchar('o');
-	_putchar('n');
+        char alx[] = "Holberton"
+        int y = 0;
+         
+        while (alx[y] != '\0')
+        {
+                 _putchar(alx[y]);
+                 y++;
+        }
 	_putchar('\n');
 
 	return (0);
