@@ -4,7 +4,7 @@
  *
  * Return: Always 0 (Success)
  */
-char _putchar(void)
+int main(void)
 {
 	_putchar('H');
 	_putchar('o');
