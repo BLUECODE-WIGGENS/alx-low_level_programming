@@ -1,11 +1,10 @@
-include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+
+#include "main.h"
 
 /**
- * main - Prints the alphabet in lowercase without q and e.
+ * print_most_numbers - a function that prints the numbers, from 0 to 9
  *
- * Return: Always 0 (Success)
+ * Return: 0-9, excluding 2 and 4, followed by new line
  */
 void print_most_numbers(void)
 {
@@ -13,11 +12,10 @@ void print_most_numbers(void)
 
 	for (i = 0; i <= 9; i++)
 	{
-		if (i != 2 && i != 4)
-		{
-			_putchar(i);
-		}
+		if ((i == 2) || (i == 4))
+			continue;
+		else
+			_putchar(i + '0');
 	}
 	_putchar('\n');
-	return (0);
 }
