@@ -1,18 +1,15 @@
-#include <main.h>
+#include "main.h"
 
 /**
- * main - Prints numbers between 0 to 9.
+ * print_numbers - a function that prints the numbers, from 0 to 9
  *
- * Return: Always 0 (Success)
+ * Return: 0-9 followed by newline
  */
 void print_numbers(void)
 {
-	int y;
+	int i;
 
-	for (y = 48; y < 58; y++)
-	{
-		_putchar(y);
-	}
+	for (i = 0; i <= 9; i++)
+		_putchar(i + '0');
 	_putchar('\n');
-	return (0);
 }
