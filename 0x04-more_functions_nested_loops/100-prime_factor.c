@@ -1,10 +1,20 @@
+#include <math.h>
 #include <stdio.h>
 /**
- * main - prints prime factors of 612852475143
- *
- * Return: Always 0 (Success)
+ *main - main block
+ *Return: 0
  */
+
 int main(void)
 {
-	return (0);
+long int a = 612852475143;
+int x;
+
+for (x = 3; x <= sqrt(a); x++)
+{
+if (a % x == 0)
+a = a / x;
+}
+printf("%li\n", a);
+return (0);
 }
