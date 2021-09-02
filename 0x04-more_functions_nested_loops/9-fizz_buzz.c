@@ -8,34 +8,26 @@
  * 3 & 5 multiples print FizzBuzz instead of the number
  * Return: Always 0 (Success)
  */
-
 int main(void)
-{        
-         int i;
+{
+	int i;
+	char f[] = "Fizz";
+	char b[] = "Buzz";
+	char fb[] = "FizzBuzz";
 
-    	 char f[] = "Fizz";
-	     char b[] = "Buzz";
-	     char fb[] = "FizzBuzz";
-
-         for (int i = 1; i <= 100; i++)
-         {
-         if (i % 15 == 0)
-         {
-             printf("%s\n", fb);
-         }
-
-         else if (i % 3 == 0)
-         {
-             printf("%s\n", f);
-         }
-         else if (i % 5 == 0)
-         {
-             printf("%s\n", b);
-         }
-         else
-         {
-             printf("%d\n", i);
-         }
-
-         }   
+	for (i = 1; i <= 100; i++)
+	{
+		if (i == 100)
+			printf("%s", b);
+		else if ((i % 3 == 0) && (i % 5 == 0))
+			printf("%s ", fb);
+		else if (i % 3 == 0)
+			printf("%s ", f);
+		else if (i % 5 == 0)
+			printf("%s ", b);
+		else
+			printf("%d ", i);
+	}
+	printf("\n");
+	return (0);
 }
