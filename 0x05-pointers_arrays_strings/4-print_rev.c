@@ -14,9 +14,9 @@ s++;
 s--;
 for (len = len; len != 0; len--)
 {
-_putchar(*s);
+_puts(*s);
 s--;
 }
 
-_putchar('\n');
+_puts('\n');
 }
