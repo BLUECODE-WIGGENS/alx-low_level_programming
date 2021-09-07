@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -9,12 +8,12 @@
  */
 void _puts(char *str)
 {
-	int i = 0;
+        int i;
 
-	while (*(str + i))
+        for (i = 0; str[i] != '\0'; i++)
 	{
-	  _puts(*(str + i), stdout);
-		i++;
+	  _puts(&str[i]);
+		
 	}
-	_puts('\n', stdout);
+	_puts("\n");
 }
