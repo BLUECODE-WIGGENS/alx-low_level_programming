@@ -1,16 +1,15 @@
-
 #include "main.h"
 
 /**
-* _puts - Reads string pointers
-* @i: counter var
-* @s: string read
-*/
+ * _puts - prints a string followed by a new line to stdout
+ * @str: string to be printed
+ */
 void _puts(char *str)
 {
-        while (*str)
+	while (*str)
 	{
-		_putchar(*str++);
+		_putchar(*str);
+		str++;
 	}
 	_putchar('\n');
 }
