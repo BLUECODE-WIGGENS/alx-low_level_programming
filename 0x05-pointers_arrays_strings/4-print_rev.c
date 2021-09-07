@@ -1,21 +1,22 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
- * print_rev - prints a string in stdout in reverse
- * @s: string to print
- *
- * Return: void
+ * print_rev - check the code for Holberton School students.
+ * @s: pointer int type
+ * Return: Always 0.
  */
 void print_rev(char *s)
 {
-	int i;
+int len;
+for (len = 0; *s != '\0'; len++)
+s++;
 
-	for (i = 0; s[i] != '\0'; ++i)
-		;
-	--i;
-	for ( ; i >= 0; --i)
-	{
-		_puts(s[i]);
-	}
-	_puts('\n');
+s--;
+for (len = len; len != 0; len--)
+{
+_putchar(*s);
+s--;
+}
+
+_putchar('\n');
 }
