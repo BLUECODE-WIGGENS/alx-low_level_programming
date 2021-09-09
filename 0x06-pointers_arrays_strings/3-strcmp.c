@@ -2,8 +2,8 @@
 
 /**
  *_strcmp - compare strings
- *@s1: a string to compare 
- *@s2: another string to compare
+ *@s1: string
+ *@s2: string
  *
  *Return: integer j
  */
