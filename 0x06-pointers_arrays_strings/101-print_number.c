@@ -42,5 +42,8 @@ void print_number(int n)
 		{
 			_putchar((num / m % 10) + '0');
 			m /= 10;
-		}
+
+        }
+    }
+}
 	
