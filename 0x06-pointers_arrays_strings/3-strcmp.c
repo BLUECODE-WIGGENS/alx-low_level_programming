@@ -5,7 +5,7 @@
  * @s1: string to compare
  * @s2: another string to compare
  * 
- * return: string.
+ * return: integer j.
  */
 
 int _strcmp(char *s1, char *s2)
@@ -20,4 +20,5 @@ i++;
 j += s1[i] - s2[i];
 return (j);
 }
+
 
