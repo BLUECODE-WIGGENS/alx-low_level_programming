@@ -1,93 +1,48 @@
-#include "main.h"
-
+#include"main.h"
+#include<stdio.h>
 /**
- * my_palindrome1 - obtains length of a
- * @a: string
- * @l: integer to count length
+ * _strlen_recursion - length str
+ * @str: pointer
  *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * Return: int
  */
-int my_palindrome1(char *a, int l)
+int _strlen_recursion(char *str)
 {
-	if (*a == 0)
-		return (l - 1);
-	return (my_palindrome1(a + 1, l + 1));
+int a;
+if (*str == '\0')
+return (0);
+str++;
+a = 1 + _strlen_recursion(str);
+return (a);
 }
 /**
- * my_palindrome2 - compares string vs string reverse
- * @a: string
- * @l: length
- *#include "main.h"
-
-/**
- * my_palindrome2 - obtains length of a
- * @a: string
- * @l: integer to count length
+ * _palindrome - function
+ * @i: intger
+ * @l: integer
+ * @p: pointer
  *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * Return: integer
  */
-int my_palindrome2(char *a, int l)
+int _palindrome(int l, int i, char *p)
 {
-	if (*a == 0)
-		return (l - 1);
-	return (my_palindrome2(a + 1, l + 1));
+if (i > l / 2)
+return (1);
+else if (p[i] != p[l - i - 1])
+return (0);
+else
+return (_palindrome(l, i + 1, p));
 }
 /**
- * my_palindrome3 - compares string vs string reverse
- * @a: string
- * @l: length
+ * is_palindrome - function
+ * @s: pointer
  *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-
-int my_palindrome3(char *a, int l)
-{
-	if (*a != *(a + l))
-		return (0);
-	else if (*a == 0)
-		return (1);
-	return (my_palindrome3(a + 1, l - 2));
-}
-/**
- * is_palindrome - checks if a string is a palindrome
- * @s: string to evaluate
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * Return: int
  */
 int is_palindrome(char *s)
 {
-	int l;
-
-	l = my_palindrome2(s, 0);
-	return (my_palindrome3(s, l));
-}
- /* Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-
-int my_palindrome3(char *a, int l)
-{
-	if (*a != *(a + l))
-		return (0);
-	else if (*a == 0)
-		return (1);
-	return (my_palindrome3(a + 1, l - 2));
-}
-/**
- * is_palindrome - checks if a string is a palindrome
- * @s: string to evaluate
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int is_palindrome(char *s)
-{
-	int l;
-
-	l = my_palindrome2(s, 0);
-	return (my_palindrome3(s, l));
+int b;
+int y;
+b = _strlen_recursion(s);
+y = _palindrome(b, 0, s);
+return (y);
 }
