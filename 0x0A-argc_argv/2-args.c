@@ -8,13 +8,13 @@
  * return: 0;
  */
 
-int main (int argc, char * argv[])
+int main (int argc, char *argv[])
 {
 int count;
 
 for (count = 0; count < argc; count++)
 {
-printf("argv[%d] : %s\n", count, argv[count]);
+printf("%s\n",argv[count]);
 }
 return (0);
 }
