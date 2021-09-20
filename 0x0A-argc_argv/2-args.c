@@ -2,19 +2,19 @@
 #include <stdio.h>
 
 /**
- * main - prints number of arguments passed.
- * @argc: argument count
- * @argv: argument vector
- * return: 0;
+ *main - Entry point
+ *@argc: count of the arguments supplied to the program
+ *@argv: array of pointers to the strings
+ *
+ *Return: 0
  */
 
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
-int count;
+int i;
 
-for (count = 0; count < argc; count++)
-{
-printf("%s\n",argv[count]);
-}
+for (i = 0; i < argc; i++)
+printf("%s\n", argv[i]);
+
 return (0);
 }
