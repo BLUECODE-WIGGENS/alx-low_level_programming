@@ -5,21 +5,21 @@
 char *create_array(unsigned int size, char c)
 {
 unsigned int i;
-int *j;
+int *p;
 
 if (size == 0)
 {
 return (NULL);     
 }
-j = malloc(sizeof(char) * size);
-if (j == NULL)
+p = malloc(sizeof(char) * size);
+if (p == NULL)
 {
 return (NULL);
 }
 for (i = 0; i < size; i++)
 {
-j[i] = c;    
+p[i] = c;    
 }
-free (j);
-return (c);
+free (p);
+return (p);
 }
