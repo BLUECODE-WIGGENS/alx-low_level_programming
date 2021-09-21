@@ -22,14 +22,14 @@ if (s1 == NULL && s2 == NULL)
 return (s1 = "");
 return (s2 = "");
 }
-for (m = 0; m < s1[m]; m++)
+for (m = 0; s1[m]; m++)
 {
-for (n = 0; n < s2[n]; n++)
+for (n = 0; s2[n]; n++)
 {
 p = m + n;
 }
 }
-s = malloc((sizeof(char) * p) + 1);
+s = malloc((sizeof(char) * p) +1);
 
 if (s == NULL)
 {
