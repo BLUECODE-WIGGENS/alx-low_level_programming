@@ -5,8 +5,8 @@
 /**
  * _strdup -  returns a pointer to a new string .
  * @str: a string to be duplicated.
- * 
- * return: the string duplicated
+ *
+ * Return: The string duplicated
  */
 
 char *_strdup(char *str)
@@ -22,7 +22,7 @@ while (str[n])
 {
 n++;
 }
-s = malloc((sizeof(char) * n) + 1);
+s = malloc((sizeof(char) * n) +1);
 
 if (s == NULL)
 {
