@@ -6,9 +6,9 @@
  * create_array - create an array of char
  * @size: The size of the array
  * @c: The char to fill
- * 
- * return: array filled
- */  
+ *
+ * Return: Array filled
+ */
 
 char *create_array(unsigned int size, char c)
 {
