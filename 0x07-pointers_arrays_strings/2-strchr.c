@@ -2,14 +2,14 @@
 
 /**
  * _strchr - locates a character in a string.
- * @s:
- * @c:
- * Return: c in the string s or NULL.\
+ * @s: string
+ * @c: character
+ * Return: C in the string s or NULL.
  */
 
 char *_strchr(char *s, char c)
 {
-        
+
 	    int i;
 
 	    for (i = 0; *(s + i); i++)
@@ -17,11 +17,11 @@ char *_strchr(char *s, char c)
 		if (*(s + i) == c)
             {
 			return (s + i);
-            }    
+            }
 	    }
 	    if (*(s + i) == c)
         {
 		        return (s + i);
-        }       
+        }
 	return (0);
 }
