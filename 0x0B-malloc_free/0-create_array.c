@@ -21,5 +21,5 @@ for (i = 0; i < size; i++)
 j[i] = c;    
 }
 free (j);
-return (j);
+return (c);
 }
