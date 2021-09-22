@@ -4,10 +4,10 @@
 
 /**
  * str_concat - concatenates two string of any size.
- * @s1: string 
+ * @s1: string
  * @s2: another string
- * 
- * return: string concatenated
+ *
+ * Return: String concatenated
  */
 
 char *str_concat(char *s1, char *s2)
@@ -28,7 +28,7 @@ for (m = 0; m < s1[m]; m++)
 ;
 for (n = 0; n < s2[n]; n++)
 ;
-s = malloc((sizeof(char) * m) + (sizeof(char) * n) +1);
+s = malloc((sizeof(char) * m) + (sizeof(char) * n) + 1);
 
 if (s == NULL)
 {
