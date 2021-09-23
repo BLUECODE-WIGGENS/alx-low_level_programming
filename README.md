@@ -16,3 +16,9 @@
 **07 : 0x06-pointers_arrays_strings**
 
 **08 : 0x07-poinetrs_arrays_strings**
+
+**09 : 0x08-recursion**
+
+**10 : 0x0A-argc_argv**
+
+**11 : 0x0B-malloc_free**
