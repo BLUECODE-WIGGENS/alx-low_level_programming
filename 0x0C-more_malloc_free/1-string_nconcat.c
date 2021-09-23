@@ -6,7 +6,7 @@
  * string_nconcat -concatenates two strings
  * @s1: destnation
  * @s2: source of string
- * 
+ *
  * Return: Pointer to newly allocated memory
  */
 
@@ -23,9 +23,9 @@ if (s2 == 0)
 {
 s2 = "";
 }
-for (a = 0; a < s1[a]; a++)
+for (a = 0; s1[a]; a++)
 ;
-for (b = 0; b < s2[b]; b++)
+for (b = 0; s2[b]; b++)
 ;
 if (b > n)
 {

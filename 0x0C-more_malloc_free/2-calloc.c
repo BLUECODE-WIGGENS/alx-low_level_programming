@@ -6,7 +6,7 @@
  * _calloc - allocates memory for an array of elements.
  * @nmemb: elements
  * @size: size of elements
- * 
+ *
  * Return: Pointer to the allocated memory.
  */
 
@@ -20,9 +20,9 @@ if (nmemb == 0 || size == 0)
 return (NULL);
 }
 p = malloc(nmemb * size);
-if(p == 0)
+if (p == 0)
 {
-return (0);
+return (NULL);
 }
 while (i < nmemb * size)
 {
