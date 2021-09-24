@@ -3,53 +3,47 @@
 #include <stdlib.h>
 
 /**
- * string_nconcat -concatenates two strings
- * @s1: destnation
+ * string_nconcat - function to concatnate strings with n bytes
+ * @s1: destination for concatnation
  * @s2: source of string
- *
- * Return: Pointer to newly allocated memory
+ * @n: int type for size of byte
+ * Return: pointer to new memory allocated
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-unsigned int a, b, c = 0;
-char *s;
+	int a, b;
+	int c = n;
+	char *p;
+	int i, j;
 
-if (s1 == NULL)
-{
-s1 = "";
-}
-if (s2 == NULL)
-{
-s2 = "";
-}
-for (a = 0; s1[a] != '\0'; a++)
-;
-for (b = 0; s2[b] != '\0'; b++)
-;
-if (b >= n)
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 
-b = n;
+	for (i = 0; s1[i] != '\0'; i++)
+		;
+	for (j = 0; s2[j] != '\0'; j++)
+		;
 
-s = malloc((sizeof(char) * a) + (sizeof(char) * b) + 1);
-
-if (s == NULL)
-{
-return (NULL);
-}
-
-while (*s1 = '\0')
-{
-s1[c] = *s1;
-c++;
-s1++;
-}
-while (*s2 = '\0')
-{
-s2[c] = *s2;
-c++;
-s2++;
-}
-s[a + b] = '\0';
-return (s);
+	if (c >= j)
+	{
+		c = j;
+		p = malloc(sizeof(char) * (i + j + 1));
+	}
+	else
+		p = malloc(sizeof(char) * (i + n + 1));
+	if (p == NULL)
+		return (NULL);
+	for (a = 0; a < i; a++)
+	{
+		p[a] = s1[a];
+	}
+	for (b = 0; b < c; b++)
+	{
+		p[a++] = s2[b];
+	}
+	p[a++] = '\0';
+	return (p);
 }
