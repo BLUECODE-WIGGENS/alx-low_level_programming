@@ -1,49 +1,52 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
- * string_nconcat - function to concatnate strings with n bytes
- * @s1: destination for concatnation
- * @s2: source of string
- * @n: int type for size of byte
- * Return: pointer to new memory allocated
- */
-
+  * string_nconcat - ...
+  * @s1: ...
+  * @s2: ...
+  * @n: ...
+  *
+  * Return: ...
+  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-int a, b;
-int c = n;
-char *p;
-int i, j;
+	unsigned int i = 0, j = 0, k = 0, l = 0;
+	char *str;
 
-if (s1 == NULL)
-s1 = "";
-if (s2 == NULL)
-s2 = "";
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 
-for (i = 0; s1[i] != '\0'; i++)
-;
-for (j = 0; s2[j] != '\0'; j++)
-;
+	while (s1[i])
+		i++;
 
-if (c >= j)
-{
-c = j;
-p = malloc(sizeof(char) * (i + j + 1));
-}
-else
-p = malloc(sizeof(char) * (i + n + 1));
-if (p == NULL)
-return (NULL);
-for (a = 0; a < i; a++)
-{
-p[a] = s1[a];
-}
-for (b = 0; b < c; b++)
-{
-p[a++] = s2[b];
-}
-p[a++] = '\0';
-return (p);
+	while (s2[k])
+		k++;
+
+	if (n >= k)
+		l = i + k;
+	else
+		l = i + n;
+
+	str = malloc(sizeof(char) * l + 1);
+	if (str == NULL)
+		return (NULL);
+
+	k = 0;
+	while (j < l)
+	{
+		if (j <= i)
+			str[j] = s1[j];
+
+		if (j >= i)
+		{
+			str[j] = s2[k];
+			k++;
+		}
+		j++;
+	}
+	str[j] = '\0';
+	return (str);
 }
