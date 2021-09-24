@@ -25,7 +25,7 @@ if (p == NULL)
 return (NULL);
 }
 i = 0;
-while (i < nmemb * size)
+while (i < nmemb)
 {
 p[i] = 0;
 i++;
