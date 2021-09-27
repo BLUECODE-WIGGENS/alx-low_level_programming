@@ -1,5 +1,5 @@
-#include <stdlib.h>
 #include "dog.h"
+#include <stdlib.h>
 
 /**
  *_strdup - duplicate a string
@@ -27,13 +27,9 @@ if (str1 == NULL)
 {
 return (NULL);
 }
-
-j = 0;
-while (j < i)
-{
+for (j = 0; j < i; j++)
 str1[j] = str[j];
-j++;
-}
+
 return (str1);
 }
 
