@@ -1,0 +1,25 @@
+#ifndef  _HEDER_
+#define _HEADER_
+
+/**
+ * struct dog - Dog atttribute.
+ * @name: Name of the dog.
+ * @age: how old is the dog.
+ * @owner: The master of the dog.
+ * 
+ * Description: struct dog is the attribute of a dog.
+ */
+
+struct dog
+{
+char *name;
+float age;
+char *owner;
+};
+
+void init_dog(struct dog *d, char *name, float age, char *owner);
+void print_dog(struct dog *d);
+dog_t *new_dog(char *name, float age, char *owner);
+void free_dog(dog_t *d);
+
+#endif
