@@ -1,4 +1,4 @@
-#include "main.h"
+#include "function_pointers.h"
 
 /**
  * int_index - returns the index of the first element for which the cmp function does not return 0.
