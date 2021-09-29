@@ -23,4 +23,8 @@
 
 **11 : 0x0B-malloc_free**
 
-**0x0C-more_malloc_free**
+**12 : 0x0C-more_malloc_free**
+
+**13 : 0x0D-preprocessor**
+
+**14 : 0x0F-function_pointers**
