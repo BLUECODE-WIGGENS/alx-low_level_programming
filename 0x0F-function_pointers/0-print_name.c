@@ -8,12 +8,7 @@
 
 void print_name(char *name, void (*f)(char *))
 {
-void (*ptr)(char *);
 
-if (name == NULL || f == NULL)
-{
-return;
-}
-ptr = f;
+if (name != '\0' && f != '\0')
 ptr(name);
 }
