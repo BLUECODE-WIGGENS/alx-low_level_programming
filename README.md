@@ -27,4 +27,8 @@
 
 **13 : 0x0D-preprocessor**
 
-**14 : 0x0F-function_pointers**
+**14 : 0x0E-structures_typedef**
+
+**15 : 0x0F-function_pointers**
+
+**16 : 0-sum_them_all.c**
