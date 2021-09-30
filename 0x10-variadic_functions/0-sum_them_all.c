@@ -13,11 +13,8 @@ unsigned int i = 0;
 int sum = 0;
 va_list argptr;
 
-if (n == 0)
+if (n != 0)
 {
-return (0);
-}
-
 va_start(argptr, n);
 
 while (i < n)
@@ -28,4 +25,6 @@ i++;
 va_end(argptr);
 
 return (sum);
+}
+return (0);
 }
