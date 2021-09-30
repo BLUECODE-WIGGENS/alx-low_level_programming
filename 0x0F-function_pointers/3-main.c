@@ -1,10 +1,11 @@
 #include "3-calc.h"
+#include <stdio.h>
 
 /**
  * main- entry point
  * @argc: argument count
  * @argv: pointer to an array containing the parameters
- * 
+ *
  * Return: zero.
  */
 
