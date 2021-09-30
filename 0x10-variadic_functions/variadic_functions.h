@@ -12,7 +12,7 @@
 typedef struct printer
 {
 	char *symbol;
-	void (*print)(va_list arg);
+	void (*print)(char *separator, va_list args);
 
 } printer_t;
 
