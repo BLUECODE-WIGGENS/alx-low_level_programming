@@ -6,8 +6,7 @@
  * @cmp: A pointer to the function to be used to compare values.
  * @array: Array of the values.
  *
- * Return: Returns the index of the first element 
- * for which the cmp function does not return 0.
+ * Return: Returns (-1).
  */
 
 int int_index(int *array, int size, int (*cmp)(int))
