@@ -1,5 +1,5 @@
-#ifndef _OPERATION_H
-#define _OPERATION_H
+#ifndef MAIN_H
+#define MAIN_H
 
 #include <stdio.h>
 #include <stdlib.h>
