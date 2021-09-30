@@ -1,5 +1,6 @@
 #include "3-calc.h"
 #include <stdio.h>
+#include <string.h>
 
 /**
  * get_op_func - finds the right operator
@@ -18,14 +19,15 @@ op_t ops[] = {
 {"%", op_mod},
 {NULL, NULL}
 };
+
 int i;
 i = 0;
+
 while (ops[i].op != NULL)
 {
-if (*s == *(ops[i].op) && [i] == '\0')
+if (strcmp(s, ops[i].op) == 0)
 return (ops[i].f);
 i++;
 }
-printf("Error\n");
-exit(99);
+return (NULL);
 }

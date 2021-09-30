@@ -1,5 +1,6 @@
 #include "3-calc.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main- entry point
@@ -9,10 +10,11 @@
  * Return: zero.
  */
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
 int (*ptr)(int, int);
-int a, b;
+int a;
+int b;
 char *s;
 
 if (argc != 4)
@@ -33,8 +35,8 @@ ptr = get_op_func(s);
 if (ptr == NULL)
 {
 printf("Error\n");
-exit(99);
+exit(100);
 }
-printf("%d\n", (a, b));
+printf("%d\n", ptr(a, b));
 return (0);
 }
