@@ -1,8 +1,6 @@
 #ifndef FUNCTION_H
 #define FUNCTION_H
 
-
-#include <stdarg.h>
 #include <stdarg.h>
 
 /**

@@ -14,7 +14,6 @@ unsigned int i = 0;
 va_list argp;
 va_start(argp, n);
 
-
 while (i < n)
 {
 printf("%d", va_arg(argp, int));

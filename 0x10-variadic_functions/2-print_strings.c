@@ -1,5 +1,5 @@
-
 #include "variadic_functions.h"
+#include <stdarg.h>
 
 /**
  *print_strings - entry point
@@ -22,7 +22,7 @@ while (i < n)
 {
 c = va_arg(argc, char*);
 
-if (c == NULL)
+if (c == 0)
 printf("(nil)");
 else
 printf("%s", c);
