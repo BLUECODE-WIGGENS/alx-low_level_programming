@@ -12,6 +12,7 @@ void (*p)(char *);
 
 if (name == NULL || f == NULL)
 return;
+
 p = f;
 p(name);
 }
