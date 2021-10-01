@@ -22,9 +22,10 @@ while (i < n)
 sum += va_arg(argptr, int);
 i++;
 }
-va_end(argptr);
 
+va_end(argptr);
 return (sum);
+
 }
 return (0);
 }
