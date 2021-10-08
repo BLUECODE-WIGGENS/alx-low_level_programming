@@ -1,10 +1,10 @@
 #include "lists.h"
 
 /**
- *print_list - Prints all the elements of a list_t list
+ *print_list - Prints all the elements of a list
  *@h: pointer to head
  *
- *Return: number of nodes
+ *Return: Number of nodes
  */
 
 size_t print_list(const list_t *h)
