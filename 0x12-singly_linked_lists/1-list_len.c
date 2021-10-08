@@ -9,15 +9,13 @@
 
 size_t list_len(const list_t *h)
 {
-unsigned int num = 0;
-const list_t *ptr;
+size_t count = 0;
 
-ptr = h;
+	while (h)
+	{
+		h = h->next;
+		count++;
+	}
 
-while (ptr != NULL)
-{
-num++;
-ptr = ptr->next;
-}
-return (ptr);
+	return (count);
 }
