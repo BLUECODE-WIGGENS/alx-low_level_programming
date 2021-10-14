@@ -1,7 +1,8 @@
 #include "main.h"
 
+
 /**
- *findbits - count number of bits to be flipped
+ *search_bits - count number of bits to be flipped
  *@a: unsigned long integer
  *
  *Return: number of bits
@@ -10,6 +11,7 @@
 unsigned int search_bits(unsigned long int a)
 {
 long int i = 0;
+
 
 while (a)
 {
