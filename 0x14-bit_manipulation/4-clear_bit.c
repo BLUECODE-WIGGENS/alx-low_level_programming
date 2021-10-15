@@ -3,7 +3,7 @@
 /**
  * clear_bit - sets the value of a bit to 0
  * @n: number
- * @index: index 
+ * @index: index
  *
  * Return: 1 if it worked, or
  *-1 if an error occurred
@@ -15,7 +15,6 @@ if (index >= 32)
 return (-1);
 
 s = 1 << index;
-*n &= ~(s);
- 
+*n &= ~(s); 
 return (1);
 }

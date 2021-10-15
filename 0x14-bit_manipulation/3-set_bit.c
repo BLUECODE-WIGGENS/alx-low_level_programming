@@ -4,8 +4,8 @@
  * set_bit - sets the value of a bit to 1
  * @n: number
  * @index: index
- * 
- * Return: 1 if it worked, or -1 
+ *
+ * Return: 1 if it worked, or -1
  *if an error occurred
  */
 
