@@ -1,4 +1,4 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
   * main - Entry point
@@ -21,49 +21,48 @@ int main(int argc, char **argv)
 
 /**
   * copy_file - ...
-  * @filr_from: file source
-  * @file_to: file destination
+  * @src: ...
+  * @dest: ...
   *
   * Return: ...
   */
-void copy_file(const char *file_from, const char *file_to)
+void copy_file(const char *src, const char *dest)
 {
-	int file_d1, file_d2, read_write;
-	char buffer[1024];
+	int ofd, tfd, readed;
+	char buff[1024];
 
-	file_d1 = open(file_from, O_RDONLY);
-	if (!file_from || file_d1 == -1)
+	ofd = open(src, O_RDONLY);
+	if (!src || ofd == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", src);
 		exit(98);
 	}
 
-	file_d2 = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	while ((read_write = read(file_d1, buffer, 1024)) > 0)
+	tfd = open(dest, O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	while ((readed = read(ofd, buff, 1024)) > 0)
 	{
-		if (write(file_d2, buffer, read_write) != read_write || file_d2 == -1)
+		if (write(tfd, buff, readed) != readed || tfd == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", dest);
 			exit(99);
 		}
 	}
 
-	if (read_write == -1)
+	if (readed == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", src);
 		exit(98);
 	}
 
-	if (close(file_d1)) == -1)
+	if (close(ofd) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_d1);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", ofd);
 		exit(100);
 	}
 
-	if (close(file_d2) == -1)
+	if (close(tfd) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_d2);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", tfd);
 		exit(100);
-    }
-
+	}
 }
