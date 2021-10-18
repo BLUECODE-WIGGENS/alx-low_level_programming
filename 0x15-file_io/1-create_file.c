@@ -26,4 +26,6 @@ if (write_read == -1)
 return (-1);
 }
 close(file_d);
+
+return (1);
 }
