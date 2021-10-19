@@ -21,48 +21,48 @@ int main(int argc, char **argv)
 
 /**
   * copy_file - ...
-  * @src: ...
-  * @dest: ...
+  * @file_from: ...
+  * @file_to: ...
   *
   * Return: ...
   */
-void copy_file(const char *src, const char *dest)
+void copy_file(const char *file_from, const char *file_to)
 {
-	int ofd, tfd, readed;
-	char buff[1024];
+	int file_d1, file_d2, read_write;
+	char buffer[1024];
 
-	ofd = open(src, O_RDONLY);
-	if (!src || ofd == -1)
+    file_d1 = open(file_from, O_RDONLY);
+	if (!file_from || file_d1 == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", src);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 		exit(98);
 	}
 
-	tfd = open(dest, O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	while ((readed = read(ofd, buff, 1024)) > 0)
+	file_d2 = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	while ((read_write = read(file_d2, buffer, 1024)) > 0)
 	{
-		if (write(tfd, buff, readed) != readed || tfd == -1)
+		if (write(file_d2, buffer, read_write) != read_write || file_d2 == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", dest);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filr_to);
 			exit(99);
 		}
 	}
 
-	if (readed == -1)
+	if (read_write == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", src);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 		exit(98);
 	}
 
-	if (close(ofd) == -1)
+	if (close(file_d1) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", ofd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_d1);
 		exit(100);
 	}
 
-	if (close(tfd) == -1)
+	if (close(file_d2) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", tfd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_d2);
 		exit(100);
 	}
 }
