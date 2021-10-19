@@ -29,7 +29,7 @@ return (0);
 }
 readed = read(file_d1, buffer, letters);
 buffer[letters] = '\0';
-close (file_d1);
+close(file_d1);
 
 file_d2 = write(STDOUT_FILENO, buffer, readed);
 if (file_d2 == -1)
