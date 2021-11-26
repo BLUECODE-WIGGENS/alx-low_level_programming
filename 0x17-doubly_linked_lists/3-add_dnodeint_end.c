@@ -5,7 +5,7 @@
  * @head: head pointer
  * @n: data variable
  *
- * Return: the address of the new element, or NULL if if failed
+ * Return: The address of the new element, or NULL if if failed
  */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
