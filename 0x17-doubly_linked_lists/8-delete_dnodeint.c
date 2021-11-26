@@ -3,7 +3,7 @@
 /**
  * delete_dnodeint_at_index - delete node at given index
  * @head: pointer to pointer to head
- *@index: position to delete 
+ *@index: position to delete
  *
  * Return: 1 on success, otherwise -1
  */
@@ -31,7 +31,7 @@ else
 {
 temporary_node->prev->next = temporary_node->next;
 if (temporary_node->next != NULL)
-temporary_node->next->prev = temporary_node->prev; 
+temporary_node->next->prev = temporary_node->prev;
 }
 free(temporary_node);
 return (1);

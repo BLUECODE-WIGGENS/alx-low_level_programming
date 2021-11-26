@@ -4,7 +4,7 @@
  * sum_dlistint - sums all the data of a linked list
  * @head: head pointer
  *
- *Return: The sum of all the data of a list 
+ *Return: The sum of all the data of a list
  */
 int sum_dlistint(dlistint_t *head)
 {
