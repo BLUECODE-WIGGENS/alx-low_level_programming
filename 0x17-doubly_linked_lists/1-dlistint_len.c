@@ -8,11 +8,11 @@
  */
 size_t dlistint_len(const dlistint_t *h)
 {
-int var_list;
-while (h)
+size_t var_list;
+
+for (var_list = 0; h != NULL; var_list++)
 {
 h = h->next;
-var_list++;
 }
 return (var_list);
 }
